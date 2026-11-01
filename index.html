@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Kunal Exe Coffee | Brewed to Perfection</title>
+ <meta name="description" content="Kunal Exe Coffee - premium roasted coffee. Order easily on WhatsApp or email.">
+ <!-- Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <!-- CSS -->
+ <link rel="stylesheet" href="css/hero-carousel.css">
+ <link rel="stylesheet" href="css/products.css">
+ <link rel="stylesheet" href="css/footer.css">
+ <link rel="stylesheet" href="css/site.css">
+ <link rel="stylesheet" href="css/effects.css">
+ <!-- Lenis smooth scroll -->
+ <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+ <script type="module" src="js/carousel.js"></script>
+ <script type="module" src="js/layout.js"></script>
+</head>
+<body data-page="home" data-nav="overlay">
+
+ <!-- HERO (nav, cart and footer are added by js/layout.js) -->
+ <section id="hero-carousel" class="hero-carousel">
+   <div class="carousel-container">
+     <!-- Slide 1 -->
+     <div class="carousel-slide active" data-slide="0" style="background-image:url('/images/hero-floating-beans.jpg')">
+       <video class="carousel-video" autoplay loop muted playsinline preload="auto" poster="images/hero-floating-beans.jpg"><source src="videos/hero_espresso_cup.mp4" type="video/mp4"></video>
+       <div class="carousel-content-split">
+         <div class="hero-top-left">
+           <p class="carousel-label">SIGNATURE BLEND</p>
+           <h1 class="carousel-headline">Dark Espresso</h1>
+           <p class="carousel-tagline">Bold, intense, unforgettable.</p>
+         </div>
+         <div class="hero-bottom-right">
+           <p class="carousel-description">Rich Arabica beans roasted to perfection.</p>
+           <div class="carousel-price"><span class="price-amount">₹899</span><span class="price-unit">per 250g</span></div>
+           <div class="carousel-cta"><button class="btn-primary" onclick="scrollToProducts('dark-espresso')">Shop Now</button></div>
+         </div>
+       </div>
+     </div>
+     <!-- Slide 2 -->
+     <div class="carousel-slide" data-slide="1" style="background-image:url('/images/hero-floating-beans.jpg')">
+       <video class="carousel-video" loop muted playsinline preload="none" poster="images/hero-floating-beans.jpg"><source src="videos/hero_vanilla.mp4" type="video/mp4"></video>
+       <div class="carousel-content-split">
+         <div class="hero-top-left">
+           <p class="carousel-label">PREMIUM ROAST</p>
+           <h1 class="carousel-headline">Vanilla French</h1>
+           <p class="carousel-tagline">Smooth, sweet, elegant.</p>
+         </div>
+         <div class="hero-bottom-right">
+            <div class="carousel-price"><span class="price-amount">₹999</span><span class="price-unit">per 250g</span></div>
+            <div class="carousel-cta"><button class="btn-primary" onclick="scrollToProducts('vanilla-french')">Shop Now</button></div>
+         </div>
+       </div>
+     </div>
+     <!-- Slide 3 -->
+     <div class="carousel-slide" data-slide="2" style="background-image:url('/images/hero-floating-beans.jpg')">
+       <video class="carousel-video" loop muted playsinline preload="none" poster="images/hero-floating-beans.jpg"><source src="videos/brew_hazelnut.mp4" type="video/mp4"></video>
+        <div class="carousel-content-split">
+         <div class="hero-top-left">
+           <p class="carousel-label">SEASONAL</p>
+           <h1 class="carousel-headline">Hazelnut Brew</h1>
+         </div>
+          <div class="hero-bottom-right">
+            <div class="carousel-price"><span class="price-amount">₹999</span><span class="price-unit">per 250g</span></div>
+            <div class="carousel-cta"><button class="btn-primary" onclick="scrollToProducts('hazelnut-brew')">Shop Now</button></div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Nav Arrows & Pagination -->
+   <button class="carousel-nav carousel-nav--prev" onclick="prevSlide()" aria-label="Previous slide"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18L9 12L15 6"/></svg></button>
+   <button class="carousel-nav carousel-nav--next" onclick="nextSlide()" aria-label="Next slide"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6L15 12L9 18"/></svg></button>
+   <div class="carousel-pagination">
+     <button class="pagination-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+     <button class="pagination-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+     <button class="pagination-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+   </div>
+ </section>
+
+ <!-- THE ROAST -->
+ <section class="premium-video-section">
+   <img class="premium-video-bg" src="images/story-roasting-machine.jpg" alt="" loading="lazy">
+   <div class="premium-overlay" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));"></div>
+   <div class="premium-content">
+     <span class="premium-label">THE PROCESS</span>
+     <h2 class="premium-headline">Masterfully Roasted</h2>
+     <p class="premium-text">We coax out the hidden flavors of every bean. The heat is our brush, the bean our canvas.</p>
+   </div>
+ </section>
+
+ <!-- THE GRIND -->
+ <section class="premium-video-section" style="height: 60vh;">
+   <img class="premium-video-bg" src="images/story-coffee-grinding.jpg" alt="" loading="lazy">
+   <div class="premium-overlay" style="background: rgba(0,0,0,0.3);"></div>
+   <div class="premium-content" style="text-align: left; margin-left: 0; max-width: 1200px; width: 100%;">
+      <div style="max-width: 500px;">
+       <span class="premium-label" style="color:#FFF;">PRECISION</span>
+       <h2 class="premium-headline" style="font-size: 64px;">The Perfect Grind</h2>
+     </div>
+   </div>
+ </section>
+
+ <!-- OUR JOURNEY: BEAN TO CUP -->
+ <section class="journey">
+   <div class="journey-header">
+     <p class="section-label">OUR JOURNEY</p>
+     <h2 class="section-headline">Bean to Cup</h2>
+   </div>
+   <div class="journey-grid">
+     <div class="journey-item"><span class="journey-step">01</span><img src="images/story-plantation-landscape.jpg" alt="Coffee plantation landscape" loading="lazy"><div class="journey-caption">The Plantation</div></div>
+     <div class="journey-item"><span class="journey-step">02</span><img src="images/story-cherry-harvest.jpg" alt="Hand harvesting coffee cherries" loading="lazy"><div class="journey-caption">Hand Harvest</div></div>
+     <div class="journey-item"><span class="journey-step">03</span><img src="images/story-beans-drying.jpg" alt="Coffee beans sun drying" loading="lazy"><div class="journey-caption">Sun Drying</div></div>
+     <div class="journey-item"><span class="journey-step">04</span><img src="images/story-beans-cooling.jpg" alt="Roasted beans cooling" loading="lazy"><div class="journey-caption">Cooling After Roast</div></div>
+     <div class="journey-item"><span class="journey-step">05</span><img src="images/story-burlap-sack.jpg" alt="Coffee beans in a burlap sack" loading="lazy"><div class="journey-caption">Packed Fresh</div></div>
+   </div>
+ </section>
+
+ <!-- PRODUCTS (cards are rendered from js/data.js) -->
+ <section id="products" class="products-section">
+   <div class="container">
+     <div class="section-header">
+       <p class="section-label">OUR COLLECTION</p>
+       <h2 class="section-headline">Discover Our Coffees</h2>
+       <p class="section-description">Add to cart, then send your order straight to us on WhatsApp or email.</p>
+     </div>
+     <div class="products-grid" id="products-grid"></div>
+   </div>
+ </section>
+
+ <!-- THE EXTRACTION -->
+ <section class="premium-video-section" style="background-image:url('/images/hero-floating-beans.jpg'); background-size:cover; background-position:center;">
+   <img class="premium-video-bg" src="images/story-espresso-extraction.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+   <div class="premium-overlay" style="background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%);"></div>
+   <div class="premium-content">
+     <span class="premium-label">LIQUID GOLD</span>
+     <h2 class="premium-headline">The Extraction</h2>
+     <p class="premium-text">The final moment of truth. Water meets coffee in a delicate dance.</p>
+   </div>
+ </section>
+
+</body>
+</html>
