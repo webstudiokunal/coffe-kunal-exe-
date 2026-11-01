@@ -5,6 +5,7 @@ const page = (name) => fileURLToPath(new URL(`./${name}`, import.meta.url));
 
 // Multi-page site: every .html file must be listed here so it ends up in the build.
 export default defineConfig({
+  base: './',
   build: {
     rollupOptions: {
       input: {
